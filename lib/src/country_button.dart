@@ -68,8 +68,8 @@ class CountryButton extends StatelessWidget {
                 child: GrayScale(
                   visible: !enabled,
                   child: CountryFlag.fromCountryCode(
-                    isoCode.name,
-                    width: flagSize,
+                    isoCode,
+                    width: flagSize * 1.5,
                     height: flagSize,
                   ),
                 ),
