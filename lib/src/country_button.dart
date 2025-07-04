@@ -1,6 +1,8 @@
 import 'package:circle_flags/circle_flags.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_country_selector/flutter_country_selector.dart';
+import 'package:country_flags/country_flags.dart';
+
 
 @Deprecated('Use [CountryButton] instead')
 typedef CountryChip = CountryButton;
@@ -65,9 +67,10 @@ class CountryButton extends StatelessWidget {
               ExcludeSemantics(
                 child: GrayScale(
                   visible: !enabled,
-                  child: CircleFlag(
+                  child: CountryFlag.fromCountryCode(
                     isoCode.name,
-                    size: flagSize,
+                    width: flagSize,
+                    height: flagSize,
                   ),
                 ),
               ),
