@@ -68,12 +68,17 @@ class CountryButton extends StatelessWidget {
                 child: GrayScale(
                   visible: !enabled,
                   child: CountryFlag.fromCountryCode(
-                    isoCode,
+                    isoCode.name,
                     width: flagSize,
                     height: flagSize,
                   ),
                 ),
               ),
+              CountryFlag.fromCountryCode(
+                    isoCode,
+                    width: flagSize,
+                    height: flagSize,
+                  ),
               const SizedBox(width: 8),
             ],
             if (showDialCode) ...[
